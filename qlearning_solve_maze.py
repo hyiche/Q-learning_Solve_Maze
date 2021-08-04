@@ -136,7 +136,7 @@ if __name__ == "__main__":
         'min_epsilon': 0.001,  # the minima of explore rate during entire learning process.
 
         # # main function related params.
-        'show_time': 0.08,     # the showing time of circle, modify this value can shorten the program execution time.
+        'show_time': 0.08,     # the showing time of blue circle, modify this value can shorten the program execution time.
         'render_maze': True,
         'num_episodes': 180,   # the number of episode.
         'max_time_step': 10000
@@ -144,7 +144,7 @@ if __name__ == "__main__":
 
     q = QLearningAgent(**params)
     q.train_and_save_model()
-    
+
     # # If use random maze environment, load_saved_model_and_play() will fail,
     # # because each reload of the maze environment will be different from the last time.
     q.load_saved_model_and_play()
