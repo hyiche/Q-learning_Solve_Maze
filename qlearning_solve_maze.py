@@ -141,9 +141,10 @@ if __name__ == "__main__":
         'num_episodes': 180,   # the number of episode.
         'max_time_step': 10000
     }
+
     q = QLearningAgent(**params)
     q.train_and_save_model()
-
+    
     # # If use random maze environment, load_saved_model_and_play() will fail,
     # # because each reload of the maze environment will be different from the last time.
     q.load_saved_model_and_play()
